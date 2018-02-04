@@ -1,0 +1,27 @@
+.panel{
+    max-width: 800px;
+    margin: auto;
+    .card-body{
+        transition:all .5s;
+        padding: 4rem 3rem;
+        .card-title{
+            color: $primary;
+            text-transform: uppercase;
+        }
+        .form-row{
+            padding: .5rem 0;
+        }
+        .custom-checkbox{
+            margin: 2rem 0 1rem;
+        }
+    }
+    .card-image{
+        display: none;
+        img{
+            height: 100%;
+            object-fit: cover;
+            width: 100%;
+        }
+    }
+    @include radio-button;
+}

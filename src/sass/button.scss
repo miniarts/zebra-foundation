@@ -1,0 +1,13 @@
+.btn{
+    text-transform: uppercase;
+}
+.btn-primary{
+    border-bottom: solid 5px #87ad5e;
+}
+.btn-secondary{
+    border-bottom: solid 5px #303339;
+}
+.btn-warning{
+    border-bottom: solid 5px #e8a700;
+    color: $white;
+}

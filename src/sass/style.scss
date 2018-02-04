@@ -1,0 +1,21 @@
+@import "../bootstrap-4.0.0/scss/_functions";
+@import "_variables"; 
+
+@import "../bootstrap-4.0.0/scss/mixins/_breakpoints";
+@import "../bootstrap-4.0.0/scss/mixins/_grid-framework";
+@import "../bootstrap-4.0.0/scss/mixins/_grid";
+
+@import "../bootstrap-4.0.0/scss/utilities/_display";
+@import "../bootstrap-4.0.0/scss/utilities/_flex";
+
+@import "../fontawesome/fontawesome";
+
+@import "base"; 
+@import "button"; 
+@import "header"; 
+@import "form"; 
+@import "panel"; 
+@import "footer"; 
+
+
+

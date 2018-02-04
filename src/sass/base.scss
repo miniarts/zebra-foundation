@@ -1,0 +1,16 @@
+
+
+section{
+    padding:0 2rem 3rem;
+    h2, .lead, .jumpotron-heading{
+        text-align: center;
+    }
+}
+@include media-breakpoint-down(sm) {
+    .container > .row > div[class*="col-"]{
+        padding-bottom: $spacer;
+    }
+}
+.lead{
+    margin:1.5rem 0 2.5rem;
+}

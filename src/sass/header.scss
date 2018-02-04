@@ -1,0 +1,42 @@
+
+header{
+    .navbar-brand{
+        max-width: 60%;
+    }
+    .form-inline{
+        @include media-breakpoint-down(md) {
+            flex:1;
+            .form-control{
+                float: left;
+                width: 75%;
+            }
+        }
+        button{
+            position: relative;
+            @include media-breakpoint-down(md) {
+                float: left;
+                width: 25%;
+                overflow: hidden;
+                border: solid 1px $primary;
+                span{
+                    display:none;
+                }
+            }
+            svg{
+                @include media-breakpoint-down(md) {
+                    path{
+                        fill:$white;
+                    }
+                }
+                @include media-breakpoint-up(lg) {
+                    left:-40px;
+                    top:12px;
+                    position:absolute;
+                    path{
+                        fill:$gray-900;
+                    }
+                }
+            }
+        }
+    }
+}

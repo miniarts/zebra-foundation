@@ -1,0 +1,15 @@
+footer{
+    background-color: $gray-900;
+    padding: 2rem;
+    color: $white;
+    .nav-link{
+        color: $white;
+        padding-left: 0;
+        &:hover{
+            color: darken($white, 10%);
+        }
+    }
+    address{
+        margin-top:$spacer;
+    }
+}
