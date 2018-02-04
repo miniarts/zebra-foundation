@@ -2,9 +2,12 @@
 
 Folders:
 
-ASSETS - All the images and fonts/icons.
-DIST - Compiled css/js and vendor js.  
-SRC - All the pre-compiled code.
+<ul>
+<li>index.html - the entry point.</li>
+<li>assets - All the images and fonts/icons.</li>
+<li>dist - Compiled css/js and vendor js.  </li>
+<li>src - All the pre-compiled code.</li>
+</ul>
 
 
 GULP

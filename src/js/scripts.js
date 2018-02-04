@@ -1,74 +1,47 @@
+
 (function($, window) {
-    "use strict";
-    var app = window.zebra || {},
-        zebra = {
+   "use strict";
+    
+    var zebra = {
             init: function(){
-                zebra.setDonationImg();
-                zebra.setDonationAmout();
+                $(document).ready(function(){
+                    zebra.setDonationImg();
+                    zebra.setDonationAmout();
+                });
             },
             setDonationImg: function() {
-                var $cardBody = $('.card-body');
-                    
-                $('#selectDonation').on('change', function(){
-                    var value = $(this).find(':selected').val(),
-                        path = '',
-                        imageDiv = '';
+                var options = {
+                    divName: '.card-body',
+                    targetDiv: '.card-image',
+                    folderPath: 'assets/',
+                    postFix: '-image.jpg'
+                };
 
-                    if(value === ''){
-                        $('.card-image').fadeOut(500, function(){
-                            $cardBody.addClass('offset-md-2');
-                        });
-                    }else{
-                        path = 'assets/'+value+'-image.jpg';
-                        imageDiv = '<div class="card-image col-md-4"><img src="'+path+'" class="img-fluid swap-image" /></div>';
-                        
-                        if($('.card-image').length > 0){
-                            if($cardBody.hasClass('offset-md-2')){
-                                $cardBody.removeClass('offset-md-2');
+                $('#selectDonation').selectImg(options);
 
-                                $('.card-image').find('img').attr('src', path)
-                                                .parent()
-                                                .delay(800)
-                                                .fadeIn(600);
-
-                            }else{
-                                $('.card-image').fadeOut(500,function(){ 
-                                    $(this).find('img').attr('src', path);
-                                })
-                                .fadeIn(500);
-                            }
-                            
-                        }else{
-                            $cardBody.after(imageDiv)
-                                    .addClass('col-md-8')
-                                    .removeClass('offset-md-2');
-
-                            $('.card-image').delay(800)
-                                            .fadeIn(600);
-                        }       
-                    }
-                });
                 return false;
             },
             setDonationAmout: function(){
-                var $customAmount = $('.custom-amount'),
-                    $donationOption = $('.donation input[type=radio]');
+                var options = {
+                    radio: 'input[type=radio]',
+                    inputClassName: '.custom-amount'
+                },
+                    formOptions = {
+                    radioName: 'options',
+                    inputClassName: '.custom-amount'
+                };
 
-                $customAmount.on('click', function(){
-                    $donationOption.prop('checked', false);
-                });
+                $('.donation').radioOptions(options);
+                $('.card form').formValidation(formOptions);
 
-                $donationOption.on('click', function(){
-                    $customAmount.val('');
-                });
                 return false;
             }
         };
 
-    zebra.cache = app.cache || {};
+    zebra.cache = {};
 
     zebra.init($); // initialises the calls
 
-    window.zebra = $.extend(app, zebra);
+    window.zebra = $.extend(zebra);
 })(jQuery,window);
 

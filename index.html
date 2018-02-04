@@ -24,7 +24,7 @@
   <body>
     <header>
     <nav class="navbar navbar-expand-md navbar-light">
-        <div class="container">
+        <div class="container-fluid">
             <a class="navbar-brand" href="#">
                 <img src="assets/lts-logo-dark.svg" class="img-fluid" alt="Little Zebra Foundation Logo">
             </a>
@@ -48,10 +48,13 @@
                 </li>
                 </ul>
                 <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-lg-2" type="text" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-primary my-2 my-sm-0" type="submit">         
-                            <i class="fas fa-search "></i><span>Search</span>
-                    </button>
+                    <div class="search">
+                        <input class="form-control mr-lg-2" type="text" placeholder="Search" aria-label="Search">
+                        <i class="fas fa-search "></i>
+                    </div>
+                        <button class="btn btn-primary my-2 my-sm-0" type="submit">         
+                            Donate <span class="d-md-none d-lg-block">now</span>
+                        </button>
                 </form>
             </div>
         </div>
@@ -67,11 +70,11 @@
                     <div class="row">
                         <div class="card-body offset-md-2 col-md-8">
                             <h3 class="card-title text-center">Make a donation</h3>
-                            <form>
+                            <form method="post" accept-charset="UTF-8" action="/search/user">
                                 <div class="form-row align-items-center">
                                     <label class="col-md-3" for="selectDonation">I want to help</label>
                                     <div class="col-md-9">  
-                                        <select class="custom-select"  id="selectDonation">
+                                        <select class="custom-select"  id="selectDonation" required>
                                             <option value="" selected>Choose...</option>
                                             <option value="giraffe">Giraffe</option>
                                             <option value="rhino">Rhino</option>
@@ -113,9 +116,6 @@
                                 <button type="submit" class="btn btn-primary">Donate now</button>
                             </form>
                         </div>
-                        <!-- <div class="card-image col-md-4">
-                            <img src="#" class="img-fluid swap-image" />
-                        </div> -->
                     </div>
                 </div>
             </div>

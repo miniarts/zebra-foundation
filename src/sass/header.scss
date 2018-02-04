@@ -1,41 +1,50 @@
 
 header{
+    @include media-breakpoint-down(md) {
+        .nav-link{
+            font-size: .9rem;
+        }
+    }
     .navbar-brand{
-        max-width: 60%;
+        max-width: 196px;
     }
     .form-inline{
         @include media-breakpoint-down(md) {
             flex:1;
             .form-control{
                 float: left;
-                width: 75%;
+            }
+        }
+        .search{
+            position: relative;
+            width: 62%;
+            margin-right: 3%;
+            input{
+                width:100%;
+            }
+            @include media-breakpoint-down(sm) {
+                width:100%;
+                margin: 0;
             }
         }
         button{
-            position: relative;
+            width:35%;
             @include media-breakpoint-down(md) {
                 float: left;
-                width: 25%;
                 overflow: hidden;
-                border: solid 1px $primary;
-                span{
-                    display:none;
-                }
+                display: block;
             }
-            svg{
-                @include media-breakpoint-down(md) {
-                    path{
-                        fill:$white;
-                    }
-                }
-                @include media-breakpoint-up(lg) {
-                    left:-40px;
-                    top:12px;
-                    position:absolute;
-                    path{
-                        fill:$gray-900;
-                    }
-                }
+            @include media-breakpoint-down(sm) {
+                width:100%;
+                
+            }
+        }
+        input + svg{
+            position:absolute;
+            right:5%;
+            top:12px;
+            path{
+                fill:$gray-900;
             }
         }
     }
