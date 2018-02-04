@@ -1,6 +1,6 @@
 # little-zebra-foundation
 
-Folders:
+<h2>Folders:</h2>
 
 <ul>
 <li>index.html - the entry point.</li>
@@ -12,7 +12,7 @@ Folders:
 
 <h2>GULP</h2>
 Run the code at the top of gulpfile.js to install all the necessary gulp file.
-<h2>Commands:</h2>
+<h3>Commands:</h3>
 <ul>
 <li>
 gulp styles - compiles scss files in src/sass and bootstrap files, and add them into dist/css folder.  Edit bootstrap-4.scss to include the files used for the site.</li>
