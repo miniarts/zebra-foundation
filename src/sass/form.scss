@@ -1,19 +1,22 @@
 @mixin radio-button{
-    input[type=radio]{
-        display: none;
-        + label{
-            width:100%;
-        }
-        &:checked{
+    .radio-button{
+        input[type=radio]{
+            display: none;
             + label{
-                background-color: $secondary;
-                color: $white;
+                width:100%;
+            }
+            &:checked{
+                + label{
+                    background-color: $secondary;
+                    color: $white;
+                }
             }
         }
-    }
-    & > div[class*="col"]{
-        margin-bottom:5px;
-        line-height: 2rem;
-        vertical-align: middle;
+        & > div[class*="col"]{
+            margin-bottom:5px;
+            line-height: 2rem;
+            vertical-align: middle;
+            white-space: nowrap;
+        }
     }
 }
