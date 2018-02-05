@@ -1,7 +1,9 @@
 .btn{
     text-transform: uppercase;
-    font-size: .8rem;
     font-weight: bold;
+    &button{
+        font-size: .8rem;
+    }
 }
 .btn-primary{
     border-bottom: solid 5px #538918;
