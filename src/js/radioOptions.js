@@ -5,7 +5,7 @@
         var $customAmount = $(options.inputClassName),
             $donationOption = $(this).find('input[type=radio]');
 
-        $customAmount.on('keyup', function(){ 
+        $customAmount.on('click', function(){ 
             $donationOption.prop('checked', false);
         });
 
